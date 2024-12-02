@@ -724,5 +724,7 @@ def controlnet(w: Widgets, n: int, is_img2img: bool):
                 choices=[e.value for e in ControlMode],
                 value=ControlMode.BALANCED.value,
                 label="ControlNet control mode" + suffix(n),
-                elem_id=f"ad_controlnet_control_mode",
+                visible=True,
+                interactive=controlnet_exists,
+                elem_id=eid("ad_controlnet_control_mode"),
             )
